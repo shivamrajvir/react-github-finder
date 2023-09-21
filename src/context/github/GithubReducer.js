@@ -1,11 +1,14 @@
 const githubReducer = (state, action) => {
-    switch(action.type) {
+    switch (action.type) {
         case 'GET_USERS':
-            return {
-                ...state,
-                users: action.payload,
-                loading: false
-            }
+            setTimeout(() => {
+                return {
+                    ...state,
+                    users: action.payload,
+                    loading: false
+                }
+                
+            })
         default:
             return state;
     }

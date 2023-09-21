@@ -4,7 +4,7 @@ import UserItem from './userItem'
 import GithubContext from '../../context/github/GithubContext'
 
 function UserResults() {
-    const {loading, fetchUsers, users} = useContext(GithubContext)
+    const { loading, fetchUsers, users } = useContext(GithubContext)
 
     useEffect(() => {
         fetchUsers()
