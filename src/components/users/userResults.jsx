@@ -1,14 +1,15 @@
-import { useEffect, useContext } from 'react'
+import { useContext } from 'react'
 import Spinner from '../common/spinner'
 import UserItem from './userItem'
 import GithubContext from '../../context/github/GithubContext'
 
 function UserResults() {
-    const { loading, fetchUsers, users } = useContext(GithubContext)
+    // fetchUsers, 
+    const { loading, users } = useContext(GithubContext)
 
-    useEffect(() => {
-        fetchUsers()
-    }, [])
+    // useEffect(() => {
+    //     fetchUsers()
+    // }, [])
 
     if (!loading) {
         return (
